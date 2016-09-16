@@ -4,7 +4,8 @@ jdk:
   - oraclejdk8
 services:
   - docker
-env:
-  - DOCKER_HOST_NAME=localhost
-before_install: sudo rm /etc/mavenrc    
+before_install: 
+  - sudo rm /etc/mavenrc
+  - export DOCKER_HOST_NAME=localhost
+
 script: "mvn verify"
