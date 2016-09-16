@@ -6,5 +6,5 @@ services:
   - docker
 env:
   - DOCKER_HOST_NAME=localhost
-before_install: export MAVEN_SKIP_RC=true    
+before_install: sudo rm /etc/mavenrc    
 script: "mvn verify"
