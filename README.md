@@ -1,5 +1,7 @@
 # docker-integration-test
 
+[![Build Status: Linux](https://travis-ci.org/arjansh/docker-integration-test.svg?branch=master)](https://travis-ci.org/arjansh/docker-integration-test)
+
 Showcase for running integration tests through Maven on a Tomcat Docker container.
 
 To be able to run the project you need to have the following installed:
