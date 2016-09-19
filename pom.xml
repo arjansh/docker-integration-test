@@ -12,6 +12,13 @@
 	</properties>
 
 	<build>
+		<testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+        
 		<plugins>
 		    <plugin>
 		        <groupId>org.apache.maven.plugins</groupId>
@@ -22,20 +29,6 @@
 		            <target>1.8</target>
 		        </configuration>
 		    </plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.0.1</version>
-				<configuration>
-					<resources>
-						<resource>
-							<directory>src/test/resources</directory>
-							<filtering>true</filtering>
-						</resource>
-					</resources>
-				</configuration>
-			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
