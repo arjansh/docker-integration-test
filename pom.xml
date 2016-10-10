@@ -9,6 +9,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <dockerTomcatPort>8080</dockerTomcatPort>
 	</properties>
 
 	<build>
@@ -78,10 +79,10 @@
 
 							<run>
 								<ports>
-									<port>18080:8080</port>
+									<port>${dockerTomcatPort}:8080</port>
 								</ports>
 								<wait>
-									<url>http://${docker.host.address}:18080</url>
+									<url>http://${docker.host.address}:${dockerTomcatPort}</url>
 									<time>300000</time>
 								</wait>
 							</run>
