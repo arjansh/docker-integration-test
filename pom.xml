@@ -78,10 +78,10 @@
 
 							<run>
 								<ports>
-									<port>8080:8080</port>
+									<port>18080:8080</port>
 								</ports>
 								<wait>
-									<url>http://${docker.host.address}:8080</url>
+									<url>http://${docker.host.address}:18080</url>
 									<time>300000</time>
 								</wait>
 							</run>
