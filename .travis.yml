@@ -4,6 +4,6 @@ jdk:
 services:
   - docker
 env:
-  - DOCKER_HOST_NAME=localhost
+  - DOCKER_HOST=localhost
 
-script: "mvn -X clean verify"
+script: "mvn clean verify"
