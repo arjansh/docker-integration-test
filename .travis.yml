@@ -6,4 +6,4 @@ services:
 env:
   - DOCKER_HOST_NAME=localhost
 
-script: "mvn clean verify"
+script: "mvn -X clean verify"
