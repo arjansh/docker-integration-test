@@ -16,8 +16,8 @@ public class HelloWorldIT {
         final Properties testProperties = new Properties();
         testProperties.load(getClass().getClassLoader().getResourceAsStream("test.properties"));
 
-        final URL testURL = new URL("http://" + (new URI(testProperties.getProperty("host"))).getHost() + ":"
-                + testProperties.getProperty("portnumber") + "/" + testProperties.getProperty("contextpath"));
+        final URL testURL = new URL("http://" + (new URI(System.getenv("DOCKER_HOST"))).getHost() + ":" + testProperties
+                .getProperty("portnumber") + "/" + testProperties.getProperty("contextpath"));
         final HttpURLConnection connection = (HttpURLConnection) testURL.openConnection();
         connection.setRequestMethod("GET");
 
