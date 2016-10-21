@@ -21,4 +21,4 @@ Now you can run the project using
 mvn clean verify
 ```
 
-By default it starts tomcat on port 8080, you can override this using the dockerTomcatPort maven property if you want to run it on another port, e.g. `mvn clean verify -PdockerTomcatPort=8081`.
+By default it starts tomcat on port 8080, you can override this using the dockerTomcatPort maven property if you want to run it on another port, e.g. `mvn clean verify -DdockerTomcatPort=8081`.
